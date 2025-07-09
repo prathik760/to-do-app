@@ -1,0 +1,132 @@
+/* Reset and Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #f0f2f5;
+  min-height: 100vh;
+}
+
+/* App Layout */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  min-height: 100vh;
+}
+
+.app-box {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Input Section */
+.todo-input {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.todo-input input {
+  flex: 1;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.todo-input button {
+  padding: 0.75rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.todo-input button:hover {
+  background-color: #0056b3;
+}
+
+/* Todo List */
+.todo-list {
+  list-style: none;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f8f9fa;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+}
+
+.todo-item span {
+  flex: 1;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.todo-item span.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.todo-item button {
+  background: none;
+  border: none;
+  color: red;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .app-box {
+    padding: 1.5rem 1rem;
+  }
+
+  .todo-input {
+    flex-direction: column;
+  }
+
+  .todo-input button {
+    width: 100%;
+  }
+
+  .todo-input input {
+    width: 100%;
+  }
+
+  .todo-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .todo-item button {
+    align-self: flex-end;
+    margin-top: 0.5rem;
+  }
+}
